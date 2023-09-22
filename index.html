@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><i class="ri-home-heart-fill"></i><span>logo</span></a>
+        <ul class="navbar">
+
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        <div class="main">
+            <a href="#" class="user"><i class="ri-user-fill"></i>Sign In</a>
+            <a href="#">Register</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+    <div class="image">
+    <p id="line1">Discover The <span>Music</span>
+    </p>
+    <p id="line2">That Keeps <span>You Moving</span></p>
+    </div>
+   <h1 class="title">Artists</h1>
+   
+<div class="slider" x-data="{start: true, end: false}">
+  <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+    <div class="slider__item">
+      <img class="slider__image" src="taylor1.webp" alt="Image">
+      <div class="slider__info">
+        <h2>Taylot Swift</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="selena1.jpg" alt="Image">
+      <div class="slider__info">
+        <h2>Selena Gomez</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="harry.webp" alt="Image">
+      <div class="slider__info">
+        <h2>Harry Styles</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="eminem.jpg" alt="Image">
+      <div class="slider__info">
+        <h2>Eminem</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="drake.jpg" alt="Image">
+      <div class="slider__info">
+        <h2>Drake</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="divine.webp" alt="Image">
+      <div class="slider__info">
+        <h2>Divine</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="ed.jpg" alt="Image">
+      <div class="slider__info">
+        <h2>Ed sheeran</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="justin.jpg" alt="Image">
+      <div class="slider__info">
+        <h2>Justin Bieber</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="arijit.webp" alt="Image">
+      <div class="slider__info">
+        <h2>Arijit Singh</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="moose.webp" alt="Image">
+      <div class="slider__info">
+        <h2>Sidhu Moosewala</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="rehman.webp" alt="Image">
+      <div class="slider__info">
+        <h2>A.R. Rahman</h2>
+      </div>
+    </div>
+  </div>
+  <div class="slider__nav">
+    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+  </div>
+</div>   
+
+    <script type="text/javascript" src="script.js"></script>
+    
+
+    
+
+</body>
+</html>
